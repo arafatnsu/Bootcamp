@@ -10,5 +10,5 @@ function addExpenses(account, amount) {
 }
 
 
-addExpenses(myAccount, 5.5)
+addExpenses(myAccount, 5)
 console.log("value of my Account", myAccount)
