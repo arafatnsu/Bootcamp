@@ -12,4 +12,4 @@ function addExpenses(account, amount) {
 
 
 addExpenses(myAccount, 2.5)
-console.log(myAccount)
+console.log("value of my Account", myAccount)
