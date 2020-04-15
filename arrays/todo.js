@@ -19,3 +19,20 @@ todos.forEach(function(todo, index) {
     const num = index + 1
     console.log(`${num}. ${todo}`)
 })
+
+//counting...... 1..2..3..4....
+for (let count = 1; count <= 5; count++) {
+    console.log(count)
+}
+
+for (let count = 5; count >= 0; count--) {
+    console.log(count)
+}
+
+for (let count = 0; count < todos.length; count++) {
+    console.log(todos[count])
+}
+
+for (let count = todos.length - 1; count >= 0; count--) {
+    console.log(todos[count])
+}
