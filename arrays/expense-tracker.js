@@ -3,7 +3,7 @@ const account = {
     expense: [],
     income: [],
     addIncome: function(description, amount) {
-        this.expense.push({
+        this.income.push({
             description: description,
             amount: amount
         })
@@ -20,7 +20,7 @@ const account = {
         let accountBalance = 0
 
         this.income.forEach(function(income) {
-            totalIncome += expense.amount
+            totalIncome = totalIncome + income.amount
         })
 
         this.expense.forEach(function(expense) {
@@ -29,7 +29,7 @@ const account = {
 
         accountBalance = totalIncome - totalExpenses
 
-        return `${this.name} has a balance of $${this.accountBalance}.`
+        return `${this.name} has a balance of $${accountBalance}. $${totalIncome} in income. $${totalExpenses} in expense.`
     }
 }
 account.addIncome('salary', 2000)
