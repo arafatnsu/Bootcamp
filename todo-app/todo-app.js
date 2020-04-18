@@ -1,12 +1,30 @@
-const ps = document.querySelectorAll('p')
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Excerise',
+    completed: true
+}]
 
-ps.forEach(function(p) {
-    if (p.textContent.includes('the')) {
-        p.remove()
-    }
+const incompletedTodos = todos.filter(function(todo) {
+    return !todo.completed
 })
 
-//Add a new element
-const newP = document.createElement('p')
-newP.textContent = 'This is new element'
-document.querySelector('body').appendChild(newP)
+const summary = document.createElement('h2')
+summary.textContent = `You have ${incompletedTodos.length} todos left.`
+document.querySelector('body').appendChild(summary)
+
+todos.forEach(function(todo) {
+    const p = document.createElement('p')
+    p.textContent = todo.text
+    document.querySelector('body').appendChild(p)
+})
