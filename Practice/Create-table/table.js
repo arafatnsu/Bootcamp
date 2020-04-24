@@ -4,10 +4,17 @@ const users = [
     { name: "manzu", city: "Helsinki", age: 32 }
 ]
 
-const table = document.getElementById('table')
+function buildTable(data) {
+    var table = document.getElementById('my-table')
 
-for (var i = 0; i < table.rows.length; i++) {
-    for (var j = 0; j < table.rows[i].cells.length; j++) {
-
+    for (var i = 0; i < data.length; i++) {
+        var row = `<tr>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].age}</td>
+                        <td>${data[i].city}</td>
+                    </tr>`
+        table.innerHTML += row
     }
 }
+
+buildTable(users)
