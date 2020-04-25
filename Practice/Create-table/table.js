@@ -1,7 +1,8 @@
 const users = [
     { name: "Amit", city: "Berlin", age: 20 },
     { name: "Arafat", city: "Turku", age: 35 },
-    { name: "manzu", city: "Helsinki", age: 32 }
+    { name: "Arun", city: "Turku", age: 31 },
+    { name: "Manzu", city: "Helsinki", age: 32 }
 ]
 
 function buildTable(data) {
