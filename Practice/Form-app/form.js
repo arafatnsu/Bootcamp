@@ -25,5 +25,4 @@ document.querySelector('#new-todo').addEventListener('submit', function(e) {
         text: e.target.elements.text.value,
         completed: false
     })
-    renderTodos
 })
